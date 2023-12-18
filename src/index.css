@@ -1,11 +1,12 @@
 :root {
-  --css-primary: #34c94b;
-  --css-black: #121212;
-  --css-white: #ffffff;
+  --color-primary: #34c94b;
+  --color-black: #121212;
+  --color-white: #ffffff;
 }
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--css-black);
+  background-color: #121212;
 }
 
 *,

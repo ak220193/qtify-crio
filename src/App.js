@@ -1,11 +1,16 @@
-import './App.css';
+import React from "react";
+import Button from './Components/Button/Button';
+
+
 
 function App() {
-  return (
-    <div className="App">
-    <h1> Hello World </h1>
-    </div>
-  );
+    return (
+     <>
+     <Button> Give Feedback </Button>
+     </>
+      
+  
+    );
 }
 
 export default App;

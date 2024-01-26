@@ -5,12 +5,13 @@
 }
 
 .cardWrapper {
-  margin-top: 18pxl;
+  margin-top: 18px;
+  gap: 15px;
 }
 
 .wrapper {
   display: flex;
-  gap: 40pxl;
+  gap: 20px;
   flex-wrap: wrap;
 }
 

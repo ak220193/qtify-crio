@@ -4,10 +4,10 @@ import Card from "../Card/Card";
 import { CircularProgress } from "@mui/material";
 
 export default function Section({ title, data, type }) {
-  const [carouselToggle, setCarouselTogggle] = useState(true);
+  const [carouselToggle, setCarouselToggle] = useState(false);
 
   const handleToggle = () => {
-    setCarouselTogggle((prevState) => !prevState);
+    setCarouselToggle((prevState) => !prevState);
   };
   return (
     <>
@@ -23,8 +23,8 @@ export default function Section({ title, data, type }) {
         <div className={styles.cardWrapper}>
           {!carouselToggle ? (
             <div className={styles.wrapper}>
-              {data.map((ele) => (
-                <Card data={ele} type={type} />
+              {data.map((element) => (
+                <Card data={element} type={type} />
               ))}
             </div>
           ) : null}

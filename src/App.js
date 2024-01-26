@@ -2,17 +2,19 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import { Outlet } from "react-router-dom";
 import { fetchNewAlbums, fetchSongs, fetchTopAlbums } from "./Apidata/api";
+import { StyledEngineProvider } from "@mui/material";
 
 function App() {
-  const [searchData, setSearchData] = useState();
+  const [searchData, useSearchData] = useState();
   const [data, setData] = useState({});
 
   const generateData = (key, source) => {
     source().then((data) => {
-      setData((prevData) => ({ ...prevData, [key]: data }));
+      setData((prevData) => {
+        return { ...prevData, [key]: data };
+      });
     });
   };
-
   useEffect(() => {
     generateData("topAlbums", fetchTopAlbums);
     generateData("newAlbums", fetchNewAlbums);
@@ -22,10 +24,10 @@ function App() {
   const { topAlbums = [], newAlbums = [], songs = [] } = data;
   return (
     <>
-      <div>
+      <StyledEngineProvider injectFirst>
         <Navbar searchData={[...topAlbums, ...newAlbums]} />
         <Outlet context={{ data: { topAlbums, newAlbums, songs } }} />
-      </div>
+      </StyledEngineProvider>
     </>
   );
 }

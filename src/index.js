@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import HomePage from "./Pages/Homepage/Homepage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Feedback from "./Components/Feedback/Feedback";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+      },
+      {
+        path: "/Feedback",
+        element: <Feedback />,
       },
     ],
   },

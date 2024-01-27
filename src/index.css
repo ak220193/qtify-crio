@@ -3,25 +3,25 @@
   --color-black: #121212;
   --color-white: #ffffff;
 }
-body {
-  font-family: "Poppins", sans-serif;
-  background-color: var(--css-black);
-  background-color: #121212;
-}
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
 * {
   margin: 0;
 }
-
+html,
 body {
+  height: 100%;
+}
+body {
+  font-family: "Poppins", sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 
 img,
@@ -32,14 +32,12 @@ svg {
   display: block;
   max-width: 100%;
 }
-
 input,
 button,
 textarea,
 select {
   font: inherit;
 }
-
 p,
 h1,
 h2,
@@ -49,7 +47,6 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
-
 #root,
 #__next {
   isolation: isolate;
@@ -61,6 +58,7 @@ h6 {
 
 a,
 a:hover,
+a:focus,
 a:active {
   text-decoration: none;
   color: inherit;

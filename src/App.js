@@ -5,7 +5,7 @@ import { fetchNewAlbums, fetchSongs, fetchTopAlbums } from "./Apidata/api";
 import { StyledEngineProvider } from "@mui/material";
 
 function App() {
-  const [searchData, useSearchData] = useState();
+  // const [searchData, useSearchData] = useState();
   const [data, setData] = useState({});
 
   const generateData = (key, source) => {

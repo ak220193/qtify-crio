@@ -3,21 +3,21 @@ import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import styles from "./Carousel.module.css";
 import "swiper/css";
-import "swiper/css/navigation"; // Import Swiper navigation styles
+import "swiper/css/navigation"; 
 import CarouselLeftNavigation from "./CarouselLeftNav/CarouselLeftNav";
 import CarouselRightNavigation from "./CarouselRightNav/CarouselRightNav";
 
-// Controls component to reset swiper to the first slide
+
 const Controls = ({ data }) => {
   const swiper = useSwiper();
 
   useEffect(() => {
     if (swiper) {
-      swiper.slideTo(0); // Slide to the first item when data changes
+      swiper.slideTo(0);
     }
   }, [data, swiper]);
 
-  return null; // No visible component rendering
+  return null; 
 };
 
 function Carousel({ data, renderComponent }) {
@@ -33,7 +33,7 @@ function Carousel({ data, renderComponent }) {
         navigation={{
           prevEl: ".swiper-button-prev",
           nextEl: ".swiper-button-next",
-        }} // Ensure custom navigation works
+        }} 
       >
         <Controls data={data} />
         <CarouselLeftNavigation />

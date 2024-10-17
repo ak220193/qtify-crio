@@ -1,8 +1,39 @@
+/* Base styles remain unchanged */
 .button {
   background-color: var(--color-black);
   color: var(--color-primary);
   border-radius: 12px;
-  padding: 10px 16px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   cursor: pointer;
   text-decoration: none;
+}
+
+/* Media Query for Phones (max-width: 640px) */
+@media (max-width: 640px) {
+  .button {
+    padding-top: 2px;   /* Increased padding for better touch interaction */
+    padding-bottom: 2px;
+    margin-left: 15px;
+    font-size: 14px;    /* Adjust font size for smaller screens */
+  }
+}
+
+/* Media Query for Tablets (min-width: 641px and max-width: 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .button {
+    padding-top: 2px;   /* Medium padding for tablets */
+    padding-bottom: 2px;
+    font-size: 14px;    /* Slightly larger font for tablets */
+    margin-left: 10px;
+  }
+}
+
+/* Media Query for Desktops (min-width: 1025px) */
+@media (min-width: 1025px) {
+  .button {
+    padding-top: 5px;   /* Default padding */
+    padding-bottom: 5px;
+    font-size: 18px;    /* Larger font for desktops */
+  }
 }
